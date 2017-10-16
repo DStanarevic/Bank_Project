@@ -37,7 +37,7 @@ namespace Bank_Project
             Console.WriteLine("Balance: $" + balance);
         }
 
-        //Overriden Methods inherited from Account.
+        //Overriden Method inherited from Account.
         public override void MakeDeposit()
         {
             deposit = double.Parse(Console.ReadLine());
@@ -45,10 +45,10 @@ namespace Bank_Project
         }
 
         //Overriden Method inherited from Account. 
-        //If statement blocks withdrawal incase balance is below minimum.
         public override void MakeWithdrawal()
         {
             withdrawal = double.Parse(Console.ReadLine());
+            //Condition blocks withdrawal in case balance is below minimum.
             if ((balance - withdrawal) > minimumBalance)
             {
                 balance -= withdrawal;

@@ -26,7 +26,16 @@ namespace Bank_Project
             Savings newSavings = new Savings(222333, "Savings");
             Checking newChecking = new Checking(333444, "Checking");
 
+            //Prompts user for name.
+            Console.WriteLine("Please enter your name as it appears on your account. (Dan Stan)");
+            string name = Console.ReadLine();
+
+            //This method was used for the stretch task to verify the user.
+            Account.UserName(name, newClient);
+
+            //Calls main menu.
             PrintMenu(newClient, newChecking, newSavings);
+
         }
 
         //The main menu, this calls the 3 other methods and uses a loop to run the application.

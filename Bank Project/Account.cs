@@ -50,6 +50,17 @@ namespace Bank_Project
 
         //Methods
 
+        //This method was part of my stretch task, from what I understood was that we needed to 
+        //pass the Client object to the Account class and verify the users name. 
+        public static void UserName(string name, Client newClient)
+        {
+            while(name != newClient.CustomerName)
+            {
+                Console.WriteLine("Please enter your name as it appears on your account.");
+                name = Console.ReadLine();
+            }
+        }
+        
         //Abstract Method
         public abstract void GetBalance();
 
@@ -64,6 +75,5 @@ namespace Bank_Project
         {
             balance -= withdrawal;
         }
-
     }
 }
