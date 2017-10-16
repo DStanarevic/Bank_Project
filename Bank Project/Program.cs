@@ -19,7 +19,6 @@ namespace Bank_Project
             // BalanceMenu() - Displays Balance Menu and calls back to Main Menu.
             // DepositMenu() - Displays the Deposit Menu and calls back to Main Menu.
             // WithdrawMeny() - Displays Withdrawy Menu and calls back to Main menu. 
-             
 
             //Instantiated my objects.
             Client newClient = new Client("Dan Stan", "1234 Road Dr", 123456);
@@ -71,7 +70,7 @@ namespace Bank_Project
                     DepositMenu(newClient, newSavings, newChecking);
                 }
                 //The fourth option calls the Withdraw Menu method.
-                if (mainMenu ==4)
+                if (mainMenu == 4)
                 {
                     WithdrawMenu(newClient, newSavings, newChecking);
                 }
@@ -122,6 +121,7 @@ namespace Bank_Project
             Console.WriteLine("b. To Savings account.");
             Console.WriteLine("c. Choose other transaction.");
             depositMenu = char.Parse(Console.ReadLine());
+
             if (depositMenu == 'a')
             {
                 Console.WriteLine("How much money would you like to deposit into your Checking account?");
@@ -168,7 +168,7 @@ namespace Bank_Project
                 Console.WriteLine("New balance on account: "); newChecking.GetBalance();
                 Console.WriteLine("Press enter to choose another account.");
                 Console.ReadLine();
-                DepositMenu(newClient, newSavings, newChecking);
+                WithdrawMenu(newClient, newSavings, newChecking);
             }
             else if (withdrawMenu == 'b')
             {
@@ -178,13 +178,12 @@ namespace Bank_Project
                 Console.WriteLine("New balance on account: "); newSavings.GetBalance();
                 Console.WriteLine("Press enter to choose another account.");
                 Console.ReadLine();
-                DepositMenu(newClient, newSavings, newChecking);
+                WithdrawMenu(newClient, newSavings, newChecking);
             }
             else
             {
                 PrintMenu(newClient, newChecking, newSavings);
             }
         }
-
     }
 }

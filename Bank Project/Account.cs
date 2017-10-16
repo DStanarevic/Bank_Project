@@ -9,7 +9,7 @@ namespace Bank_Project
     abstract class Account
     {
         //I set my Account class as my Abstract class, the Checking and Savings classes both inherit from it.
-        
+
         //fields
         protected int accountNumber;
         protected string accountType;
@@ -54,13 +54,13 @@ namespace Bank_Project
         //pass the Client object to the Account class and verify the users name. 
         public static void UserName(string name, Client newClient)
         {
-            while(name != newClient.CustomerName)
+            while (name != newClient.CustomerName)
             {
                 Console.WriteLine("Please enter your name as it appears on your account.");
                 name = Console.ReadLine();
             }
         }
-        
+
         //Abstract Method
         public abstract void GetBalance();
 

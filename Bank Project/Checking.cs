@@ -25,7 +25,7 @@ namespace Bank_Project
         public Checking(int accountNumber, string accountType)
         {
             this.accountNumber = accountNumber;
-            this.accountType = accountType;   
+            this.accountType = accountType;
         }
 
         //Method
@@ -49,6 +49,5 @@ namespace Bank_Project
             withdrawal = double.Parse(Console.ReadLine());
             balance -= withdrawal;
         }
-
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Project
 {
-    class Savings:Account
+    class Savings : Account
     {
         //fields
         protected double balance = 400.15;
@@ -58,16 +58,5 @@ namespace Bank_Project
                 Console.WriteLine("This transaction would put your account below the $" + minimumBalance + " minimum balance.\nPlease choose another transaction.");
             }
         }
-
-
-
-
-
-
-
-
-
-
-
     }
 }
